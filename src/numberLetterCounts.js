@@ -8,8 +8,9 @@ export default function NumberLetter(number) {
   }
 }
 
-NumberLetter.prototype.inputToDigits = function() {
-  if (this.input === false) {
+NumberLetter.prototype.inputToDigits = function(number) {
+  if (typeof number !== "number") {
     return false;
   }
+  return number.toString().split("");
 };

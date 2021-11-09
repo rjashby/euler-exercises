@@ -11,8 +11,13 @@ describe("NumberLetter", () => {
     expect(foo.output).toEqual(false);
   });
 
-  test("NumberLetter.inputToDigits should return false if the input was not a number", () => {
-    let foo = new NumberLetter("bacon");
-    expect(foo.inputToDigits()).toEqual(false);
+  test("NumberLetter.inputToDigits should return false if not given a number", () => {
+    let foo = new NumberLetter(1);
+    expect(foo.inputToDigits("bacon")).toEqual(false);
+  });
+
+  test("NumberLetter.inputToDigits should return an array of digits from the input number", () => {
+    let foo = new NumberLetter(123);
+    expect(foo.inputToDigits(123)).toEqual(["1", "2", "3"]);
   });
 });
