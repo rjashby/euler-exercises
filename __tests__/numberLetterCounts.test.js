@@ -1,10 +1,18 @@
-import numberLetter from "../src/numberLetterCounts.js";
+import NumberLetter from "../src/numberLetterCounts.js";
 
-describe("numberLetter", () => {
-  test("It should output a number if given a number", () => {
-    expect(numberLetter(1)).toEqual(3);
+describe("NumberLetter", () => {
+  test("It should store the input number as input", () => {
+    let foo = new NumberLetter(1);
+    expect(foo.input).toEqual(1);
   });
-  test("It should return false if not given a number", () => {
-    expect(numberLetter("bacon")).toEqual(false);
+
+  test("It should store the output as false if not given a number", () => {
+    let foo = new NumberLetter("bacon");
+    expect(foo.output).toEqual(false);
+  });
+
+  test("NumberLetter.inputToDigits should return false if the input was not a number", () => {
+    let foo = new NumberLetter("bacon");
+    expect(foo.inputToDigits()).toEqual(false);
   });
 });
