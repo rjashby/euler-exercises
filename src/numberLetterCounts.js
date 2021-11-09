@@ -14,3 +14,7 @@ NumberLetter.prototype.inputToDigits = function(number) {
   }
   return number.toString().split("");
 };
+
+NumberLetter.prototype.digitsToCharCount = function(arrayOfDigits) {
+
+}

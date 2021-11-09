@@ -20,4 +20,9 @@ describe("NumberLetter", () => {
     let foo = new NumberLetter(123);
     expect(foo.inputToDigits(123)).toEqual(["1", "2", "3"]);
   });
+
+  test("NumberLetter.digitsToCharCount should return an integer representing the number of characters in the word version of the number", () => {
+    let foo = new NumberLetter(1);
+    expect(foo.digitsToCharCount(foo.inputToDigits(foo.input))).toEqual(3);
+  });
 });
