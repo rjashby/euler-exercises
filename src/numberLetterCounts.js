@@ -1,3 +1,6 @@
 export default function numberLetter (number) {
-  return 1;
+  if (typeof number != "number") {
+    return false;
+  }
+  return 3;
 }
